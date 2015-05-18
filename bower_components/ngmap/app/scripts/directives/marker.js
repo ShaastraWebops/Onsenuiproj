@@ -79,13 +79,12 @@
 
   var marker = function(Attr2Options, $parse) {
     var parser = Attr2Options;
-    var linkFunc = function(scope, element, attrs, mapController) {
+    var linkFunc = function(scope, element, attrs,mapController) {
       var orgAttrs = parser.orgAttributes(element);
       var filtered = parser.filter(attrs);
       var markerOptions = parser.getOptions(filtered, scope);
       var markerEvents = parser.getEvents(scope, filtered);
       console.log('marker options', markerOptions, 'events', markerEvents);
-
       var address;
       if (!(markerOptions.position instanceof google.maps.LatLng)) {
         address = markerOptions.position;

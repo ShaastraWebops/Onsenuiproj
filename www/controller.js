@@ -34,11 +34,25 @@
 
         //Map initialization  
         $timeout(function(){
+            var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
             if(navigator.geolocation)
                 {navigator.geolocation.getCurrentPosition(
                     function(position) {
+                        console.log(position);
                      start = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                 })};
+                                 var marker = new google.maps.Marker({
+      position: start,
+      map: map,
+      title: 'Hello World!'
+  });   
+                 },error,options)};
              directionsDisplay = new google.maps.DirectionsRenderer();
             var latlng = start;
             var myOptions = {

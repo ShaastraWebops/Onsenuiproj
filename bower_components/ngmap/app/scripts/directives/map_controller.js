@@ -124,6 +124,7 @@
             var lat = position.coords.latitude;
             var lng = position.coords.longitude;
             var latLng = new google.maps.LatLng(lat,lng);
+            console.log(latLng);
             deferred.resolve(latLng);
           },
           function(error) {
