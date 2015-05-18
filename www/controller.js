@@ -24,7 +24,7 @@
     //Map controller
     app.controller('MapController', function($scope, $timeout){
 
-        $scope.map;
+        var map;
         $scope.markers = [];
         $scope.markerId = 1;
         var start=new google.maps.LatLng(12.9915, 80.2336);
@@ -34,9 +34,11 @@
 
         //Map initialization  
         $timeout(function(){
-            if(navigator.geolocation){navigator.geolocation.getCurrentPosition(function(position) {
-      start = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);})}
+            if(navigator.geolocation)
+                {navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                     start = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                 })};
              directionsDisplay = new google.maps.DirectionsRenderer();
             var latlng = start;
             var myOptions = {
@@ -59,7 +61,7 @@
          var request = {
               origin:start,
               destination:end,
-              travelMode: google.maps.TravelMode.DRIVING
+              travelMode: google.maps.TravelMode.WALKING
            };
          directionsService.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
