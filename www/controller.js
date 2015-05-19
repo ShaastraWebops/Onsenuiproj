@@ -42,7 +42,7 @@
           };
           function error(err) {
               console.warn('ERROR(' + err.code + '): ' + err.message);
-          };
+          }
           if(navigator.geolocation)
             {navigator.geolocation.getCurrentPosition(
                 function(position) {
@@ -114,6 +114,23 @@
           }
       });
       } 
+        $scope.MyDelegate = {
+    configureItemScope : function(index, itemScope) {
+        console.log("Created item #" + index);
+        itemScope.item = {
+          name: 'Item #' + (index + 1)
+        };
+    },
+    calculateItemHeight : function(index) {
+      return 45;
+    },
+    countItems : function() {
+      return 8;
+    },
+    destroyItemScope: function(index, scope) {
+      console.log("Destroyed item #" + index);
+    }
+  };
 
 
         //Delete all Markers

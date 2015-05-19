@@ -1,0 +1,46 @@
+/* This is a CSS file */
+.event_card {
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list_item{
+    border-style:solid !important;
+    border-width:1px !important;
+    border-color:#ddd !important;
+    box-shadow:2px 2px 1px #eee !important;
+    margin:10px !important;
+    border-radius: 20px;
+}
+.spot{
+  background-image: url(http://shaastra.org/2015/main/img/events/categories/quizzing.jpg);
+}
+.quiz{
+ background-image: url(http://shaastra.org/2015/main/img/events/categories/quizzing.jpg);
+}
+.work{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/workshops.jpg);
+}
+.aero{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/aerofest.jpg); 
+}
+.b_eve{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/b-events.jpg);
+}
+.coding{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/coding.jpg);
+}
+.dept{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/department%20flagship.jpg);
+}
+.design{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/design%20and%20build.jpg);
+}
+.elec{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/electronics%20fest.jpg);
+}
+.inv{
+    background-image: url(http://shaastra.org/2015/main/img/events/categories/involve.jpg)
+}
